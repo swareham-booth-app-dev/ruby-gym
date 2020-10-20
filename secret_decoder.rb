@@ -5,6 +5,5 @@
 # - decode the message
 # - print the decoded message.
 
-# (Make sure to capitalize the first word in the decoded message)
 
 p "Enter in the secret you want to decode"

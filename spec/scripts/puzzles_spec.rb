@@ -102,9 +102,9 @@ describe "secret_encoder.rb" do
 end
 
 describe "secret_decoder.rb" do
-  it "prints 'I need to be more secret', when the input is '3 n22d t4 b2 m4r2 s2cr2t'", points: 2 do
-    allow_any_instance_of(Object).to receive(:gets).and_return("3 n22d t4 b2 m4r2 s2cr2t\n")
-    expect { require_relative '../../secret_decoder.rb' }.to output(/I need to be more secret/).to_stdout
+  it "prints 'You and i need to be more secret', when the input is 'Y45 1nd 3 n22d t4 b2 m4r2 s2cr2t'", points: 2 do
+    allow_any_instance_of(Object).to receive(:gets).and_return("Y45 1nd 3 n22d t4 b2 m4r2 s2cr2t\n")
+    expect { require_relative '../../secret_decoder.rb' }.to output(/You and i need to be more secret/).to_stdout
   end
 end
 
