@@ -85,3 +85,5 @@ RUN /bin/bash -l -c "curl https://cli-assets.heroku.com/install.sh | sh"
 RUN sudo apt install -y libpq-dev psmisc lsof
 USER gitpod
 RUN echo 'export PATH="$PATH:$GITPOD_REPO_ROOT/bin"' >> ~/.bashrc
+RUN echo "rvm use 2.6.6" >> ~/.bashrc
+RUN echo "rvm_silence_path_mismatch_check_flag=1" >> ~/.rvmrc
