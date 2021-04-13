@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.Dockerfile
+image: jelaniwoods/appdev2021-ruby-gym
 
 tasks:
   - init: bin/setup
