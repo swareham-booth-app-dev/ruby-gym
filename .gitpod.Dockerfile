@@ -71,8 +71,13 @@ RUN /bin/bash -l -c "gem install htmlbeautifier"
 RUN /bin/bash -l -c "gem install rufo"
 
 WORKDIR /base-rails
+COPY Gemfile /base-rails/Gemfile
+COPY Gemfile.lock /base-rails/Gemfile.lock
+RUN /bin/bash -l -c "gem install bundler:2.1.4"
 
 USER gitpod
+
+RUN /bin/bash -l -c "bundle install"
 
 RUN /bin/bash -l -c "curl https://cli-assets.heroku.com/install.sh | sh"
 
