@@ -24,4 +24,16 @@
 #   b.abbreviate # => "CMOS"
 
 
-
+class Phrase
+  attr_accessor :body
+  def abbreviate
+    body_clean = body.gsub("-", " ")
+    body_clean = body_clean.gsub(/[^0-9a-zA-Z ]/i, '')
+    words = body_clean.split(" ")
+    abbrv = ""
+    words.each do |word|
+      abbrv += word[0].upcase
+    end
+    return abbrv
+  end
+end
