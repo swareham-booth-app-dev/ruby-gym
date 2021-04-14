@@ -7,4 +7,11 @@
 
 # (Make sure to capitalize the first word in the decoded message)
 
-p "Enter in the secret you want to decode"
+#p "Enter in the secret you want to decode"
+input = gets.chomp
+text = input.gsub("1", "a")
+text = text.gsub("2", "e")
+text = text.gsub("3", "i")
+text = text.gsub("4", "o")
+text = text.gsub("5", "u")
+p text.capitalize
