@@ -11,3 +11,13 @@
 # 16
 
 p "Enter at least 2 numbers, separated by spaces:"
+input = gets.chomp
+split = input.split(" ")
+keep_list = []
+split.each do |item|
+  num = item.to_i
+  if num % 2 == 1
+    keep_list.push(num)
+  end
+end
+p keep_list.sum.to_s
