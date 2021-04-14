@@ -20,3 +20,14 @@
 #   String.isogram?("eleven") # => false
 #   String.isogram?("subdermatoglyphic") # => true
 
+class String
+  def self.isogram?(word)
+    w = word.downcase.gsub(/[^0-9a-z ]/i, '')
+    "abcdefghijklmnopqrstuvwxyz".chars.each do |letter|
+      if w.count(letter) > 1
+        return false
+      end
+    end
+    return true
+  end
+end
