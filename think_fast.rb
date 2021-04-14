@@ -33,3 +33,30 @@ p some_random_input
 
 # Write your code below
 
+#some_random_input = 5
+
+the_class = some_random_input.class
+output = ""
+if the_class == String 
+  output = some_random_input.downcase
+elsif the_class == Time
+  output = some_random_input.strftime('%A').downcase
+elsif the_class == Integer
+  if some_random_input % 2 == 0
+    output = some_random_input.to_s + " is even"
+  else
+    output = some_random_input.to_s + " is odd"
+  end
+elsif the_class == Symbol
+  output = some_random_input.downcase
+elsif  the_class == nil
+  output = "no object provided"
+elsif the_class == TrueClass
+  output = "you may pass"
+elsif the_class == FalseClass
+  output = "you may not pass"
+elsif the_class == Hash
+  output = some_random_input.keys
+end
+
+p output
